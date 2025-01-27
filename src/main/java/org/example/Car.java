@@ -14,6 +14,9 @@ public class Car {
     private String color;
     private int mileage;
 
+    private Person owner;
+
+
     // Constructors
     public Car(String brand, String model) {
         this(brand, model, LocalDate.now().getYear());
@@ -41,8 +44,16 @@ public class Car {
         this.model = model;
     }
 
+    public void setOwner(Person owner) {
+        this.owner = owner;
+    }
+
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public Person getOwner() {
+        return owner;
     }
 
     public String getBrand() {
@@ -75,6 +86,12 @@ public class Car {
                 .append(" ,Model: ").append(model)
                 .append(" ,Year: ").append(year)
                 .append(" ,Mileage: ").append(mileage);
+
+        if (owner != null) {
+            sb.append(" ,Owner: ").append(owner.getPersonInfo());
+        } else {
+            sb.append(" ,No owner assigned.");
+        }
 
         return sb.toString();
 
