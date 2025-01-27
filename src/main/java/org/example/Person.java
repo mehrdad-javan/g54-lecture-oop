@@ -7,6 +7,9 @@ public class Person {
     private String ssn;
     private String name;
     private String email;
+
+    private Car[] ownedCars = new Car[0];
+
     // add more fields as needed.
 
     // Constructors
@@ -22,4 +25,11 @@ public class Person {
         return "SSN: " + ssn + " ,Name: " + name;
     }
 
+    public void ownedCar(Car car){
+        // todo: expand the array and add a new element ...
+    }
+
+    public void removeCar(Car car){
+        // todo: remove element from the array if exist.
+    }
 }
