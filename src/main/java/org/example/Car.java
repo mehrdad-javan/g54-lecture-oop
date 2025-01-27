@@ -15,16 +15,13 @@ public class Car {
     private int mileage;
 
     // Constructors
-    public Car(String brand, String model){
-        this.vin = generateVIN();
-        this.setBrand(brand); // "   "
-        this.setModel(model);
-        this.year = LocalDate.now().getYear(); // 2025
+    public Car(String brand, String model) {
+        this(brand, model, LocalDate.now().getYear());
     }
 
-    public Car(String brand, String model, int year){
+    public Car(String brand, String model, int year) {
         this.vin = generateVIN();
-        this.setBrand(brand); // "   "
+        this.setBrand(brand);
         this.setModel(model);
         this.year = year;
     }
@@ -48,7 +45,7 @@ public class Car {
         this.year = year;
     }
 
-    public String getBrand(){
+    public String getBrand() {
         return this.brand;
     }
 
@@ -83,7 +80,7 @@ public class Car {
 
     }
 
-    private String generateVIN(){
+    private String generateVIN() {
         return UUID.randomUUID().toString();
     }
 }
