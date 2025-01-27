@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 // Class is a blueprint
 public class Person {

@@ -1,6 +1,7 @@
 package org.example;
 
-import java.time.LocalDate;
+import org.example.model.Car;
+import org.example.model.Person;
 
 public class Main {
     public static void main(String[] args) {
