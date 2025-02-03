@@ -2,7 +2,7 @@ package org.example.model;
 
 import java.util.Objects;
 
-public class FoodItem {
+public abstract class FoodItem {
 
     private String name;
     private final double price;
@@ -29,5 +29,7 @@ public class FoodItem {
     public String getDescription() {
         return "Item: " + name + " , Price: " + price;
     }
+
+    public abstract double calculateTax();
 
 }

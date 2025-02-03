@@ -38,6 +38,11 @@ public class Burger extends FoodItem {
     }
 
     @Override
+    public double calculateTax() {
+        return super.getPrice() * 0.1; // Example: 10% tax
+    }
+
+    @Override
     public String toString() {
         return "Burger{" +
                 "type='" + type + '\'' +
@@ -45,6 +50,7 @@ public class Burger extends FoodItem {
                 ", hasLettuce=" + hasLettuce +
                 '}';
     }
+
 
 
 }
