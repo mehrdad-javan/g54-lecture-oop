@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.model.Burger;
-import org.example.model.FoodItem;
-import org.example.model.Fries;
-import org.example.model.Size;
+import org.example.model.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +17,12 @@ public class Main {
         System.out.println(smallFries.getDescription());
         System.out.println(mediumFries.getDescription());
         System.out.println(largeFries.getDescription());
+
+        OrderItems orderItems1 = new OrderItems();
+        orderItems1.addItem(cheeseBurger);
+        orderItems1.addItem(chickenBurger);
+        orderItems1.addItem(smallFries);
+        orderItems1.displayItems();
 
     }
 }
